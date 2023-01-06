@@ -1,0 +1,208 @@
+$color-white: #fff;
+$color-black: #000000;
+
+@mixin font($font-family, $font-file, $font-format) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file) format($font-format);      
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font('Better-Yesterday-italic', '../fonts/Better Yesterday italic.otf', 'opentype');
+@include font('Better-Yesterday', '../fonts/Better Yesterday.otf', 'opentype');
+@include font('Caviar-Dreams', '../fonts/CaviarDreams.ttf', 'truetype');
+@include font('Caviar-Dreams-bold', '../fonts/CaviarDreams_Bold.ttf', 'truetype');
+@include font('Caviar-Dreams-bold-italic', '../fonts/CaviarDreams_BoldItalic.ttf', 'truetype');
+@include font('Caviar-Dreams-italic', '../fonts/CaviarDreams_Italic.ttf', 'truetype');
+
+html {
+	font-family: sans-serif;
+  	-ms-text-size-adjust: 100%;
+  	-webkit-text-size-adjust: 100%;
+
+  	a {
+  		text-decoration: none;
+  	}
+}
+
+body, html {
+  	height: 100%;
+	background-color: #000000;
+	margin: 0;
+}
+
+.Header {
+	width: auto;
+	height: 100%;
+	position: relative;
+
+	&--minified {
+		height: 250px;
+	}
+
+	&__link {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	&__image {
+		background-image: url("../images/header.jpg");
+		height: 100%;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__gradient {
+		background-image: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0) 50%);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);		
+	}
+
+	&__title {
+		font-family: Better-Yesterday, Arial-bold, arial, sans-serif;
+		font-size: 5em;
+		margin: 0 0 20px;
+		text-align: center;
+		font-weight: 100;
+		color: $color-white;
+	}
+
+	&__subtitle {
+		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+		font-size: 15px;
+		text-align: center;
+		display: block;
+		color: $color-white;
+	}
+}
+
+.Nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	&__item {
+		font-family: Caviar-Dreams-bold, Arial-bold, arial, sans-serif;
+		font-size: 15px;
+		color: $color-white;
+	}
+}
+
+.Home {
+	background-color: $color-black;
+
+	&__link {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	&__paragraph {	
+		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+		padding: 50px 0;
+	}
+
+	&__section {
+		width: 80%;
+		margin: 0 auto;
+		color: #FFFFFF;
+		font-size: 12px;
+		position: relative;
+
+		&--image {
+			width: 100%;
+			height: 350px;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			&01 {
+				background-image: url("../images/home_01.jpg");
+			}
+
+			&02 {
+				background-image: url("../images/home_02.jpg");
+			}
+		}
+	}
+
+	&__card {
+		background-color: #FFFFFF;
+		width: 200px;
+    	padding: 20px;
+    	margin: 0 auto;
+	    position: absolute;
+	    bottom: -50px;
+	    left: 0;
+	    right: 0;
+
+		&Title {
+			font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+			color: #000000;
+			font-size: 16px;
+		}
+
+		&Description {
+			font-family: Caviar-Dreams-bold, Arial-bold, arial, sans-serif;
+			color: #9e9e9e;
+			font-size: 12px;
+		}
+
+		@media (min-width: 928px) {
+	    	height: 150px;
+	    	bottom: 20px;
+		    right: 100px;
+		    left: unset;
+		}
+
+		&--left {
+
+			@media (min-width: 928px) {
+			    left: 100px;
+			    right: unset;
+			}			
+		}
+	}
+}
+
+.ArtPage {
+	width: 80%;
+    margin: 20px auto;
+
+    &__title {
+		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+		font-size: 24px;
+		text-align: center;
+		display: block;
+		color: $color-white;    	
+    }
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 15px;
+		grid-row-gap: 15px;
+	}
+
+	&__image {
+		width: 100%;;
+	}
+}
