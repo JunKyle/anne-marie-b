@@ -14,6 +14,8 @@
 		<link rel="icon" type="image/png" href="favicon.png" />
 		<title>Anne-Marie B.</title>
 		<link rel="stylesheet" href="assets/css/style.css">
+		<script type = "text/javascript" src="js/data.js"></script>
+		<script>getData("sculptures");</script>
 	</head>
 	<body>	
 		<header class="Header Header--minified">
@@ -28,19 +30,7 @@
 		</header>
 		<main class="ArtPage">
 			<h2 class="ArtPage__title">Sculptures</h2>
-			<section class="ArtPage__grid">
-				<a class="ArtPage__item" href="./assets/images/sculptures/001.jpg" target="_blank">
-					<img class="ArtPage__image" src="./assets/images/sculptures/001.jpg" />
-				</a>
-				<a class="ArtPage__item" href="./assets/images/sculptures/002.jpg" target="_blank">
-					<img class="ArtPage__image" src="./assets/images/sculptures/002.jpg" />
-				</a>
-				<a class="ArtPage__item" href="./assets/images/sculptures/003.jpg" target="_blank">
-					<img class="ArtPage__image" src="./assets/images/sculptures/003.jpg" />
-				</a>
-				<a class="ArtPage__item" href="./assets/images/sculptures/004.jpg" target="_blank">
-					<img class="ArtPage__image" src="./assets/images/sculptures/004.jpg" />
-				</a>
+			<section class="ArtPage__grid" id="sculptures-art">
 			</section>
 		</main>
 	</body>

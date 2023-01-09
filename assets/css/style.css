@@ -34,6 +34,9 @@ html {
   -webkit-text-size-adjust: 100%; }
   html a {
     text-decoration: none; }
+  html ul {
+    margin: 0;
+    padding: 0; }
 
 body, html {
   height: 100%;
@@ -83,15 +86,43 @@ body, html {
     text-align: center;
     display: block;
     color: #fff; }
+  .Header__nav {
+    font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px; }
 
 .Nav {
-  position: absolute;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
-  right: 0; }
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 35px; }
   .Nav__item {
-    font-family: Caviar-Dreams-bold, Arial-bold, arial, sans-serif;
-    font-size: 15px;
-    color: #fff; }
+    padding: 8px 8px 8px 32px;
+    display: block;
+    transition: 0.3s; }
+    .Nav__item a {
+      font-family: Caviar-Dreams-bold, Arial-bold, arial, sans-serif;
+      color: #fff;
+      font-size: 25px; }
+    .Nav__item:hover {
+      background-color: #282828; }
+  .Nav__close {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 35px;
+    margin-left: 50px; }
 
 .Home {
   background-color: #000000; }
@@ -158,10 +189,14 @@ body, html {
     color: #fff; }
   .ArtPage__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px; }
+    @media (min-width: 928px) {
+      .ArtPage__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr); } }
   .ArtPage__image {
     width: 100%; }
 

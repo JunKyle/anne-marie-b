@@ -14,6 +14,7 @@
 		<link rel="icon" type="image/png" href="favicon.png" />
 		<title>Anne-Marie B.</title>
 		<link rel="stylesheet" href="assets/css/style.css">
+		<script type = "text/javascript" src="js/nav.js"></script>
 	</head>
 	<body>	
 		<header class="Header">
@@ -25,10 +26,16 @@
 					<span class="Header__subtitle">Artiste, sculptrice, adoratrice de chats</span>
 				</div>
 			</a>
+			<span class="Header__nav" onclick="openNav()">&#9776;</span>
 		</header>
-		<!-- <nav class="Nav">
-			<a class="Nav__item" href="/contact">Contact</a>
-		</nav> -->
+		<nav class="Nav" id="side-nav">
+  			<a class="Nav__close" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+  			<ul>
+				<li class="Nav__item"><a href="/contact">Contact</a></li>
+				<li class="Nav__item"><a href="./sculptures.html">Sculptures</a></li>
+				<li class="Nav__item"><a href="./drawings.html">Dessins</a></li>
+			</ul>
+		</nav>
 		<main class="Home">
 			<section class="Home__section">
 				<p class="Home__paragraph">
@@ -49,7 +56,7 @@
 				</p>
 			</section>
 			<section class="Home__section Home__section--image Home__section--image02">
-				<a class="Home__link" href="./dessins.html">
+				<a class="Home__link" href="./drawings.html">
 					<div class="Home__card Home__card--left">
 						<h2 class="Home__cardTitle">Dessins</h2>
 						<p class="Home__cardDescription">découvrir des dessins à la craie, au pastel, au crayon</p>

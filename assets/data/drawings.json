@@ -1,0 +1,28 @@
+{
+	"drawings": [
+		{
+			"id": 0,
+			"name": "drawings-01",
+			"alternative": "description du dessin",
+			"link": "./assets/images/drawings/001.jpg"
+		},
+		{
+			"id": 1,
+			"name": "drawings-02",
+			"alternative": "description du dessin",
+			"link": "./assets/images/drawings/002.jpg"
+		},
+		{
+			"id": 2,
+			"name": "drawings-03",
+			"alternative": "description du dessin",
+			"link": "./assets/images/drawings/003.jpg"
+		},
+		{
+			"id": 3,
+			"name": "drawings-04",
+			"alternative": "description du dessin",
+			"link": "./assets/images/drawings/004.jpg"
+		}
+	]
+}
