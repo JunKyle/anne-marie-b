@@ -133,6 +133,56 @@ body, html {
   .Home__paragraph {
     font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
     padding: 50px 0; }
+  .Home__grid {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin-bottom: 500px; }
+    @media (min-width: 928px) {
+      .Home__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr); } }
+    .Home__gridItem {
+      overflow: hidden;
+      height: 65vh;
+      cursor: pointer;
+      position: relative; }
+      @media (min-width: 928px) {
+        .Home__gridItem .Home__gridOver, .Home__gridItem .Home__gridTitle {
+          display: none; } }
+      .Home__gridItem:hover .Home__gridOver, .Home__gridItem:hover .Home__gridTitle {
+        display: block; }
+    .Home__gridImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .Home__gridOver {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      background-color: #282828;
+      opacity: 0.3; }
+    .Home__gridTitle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      z-index: 1000;
+      font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+      color: #fff;
+      font-size: 16px;
+      padding: 20px;
+      background-color: #282828; }
   .Home__section {
     width: 80%;
     margin: 0 auto;

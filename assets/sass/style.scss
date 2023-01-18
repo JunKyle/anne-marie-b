@@ -160,6 +160,76 @@ body, html {
 		padding: 50px 0;
 	}
 
+	&__grid {
+		width: 80%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		grid-column-gap: 15px;
+		grid-row-gap: 15px;
+
+		@media (min-width: 928px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(1, 1fr);
+		}
+
+		&Item {
+			overflow: hidden;
+			height: 65vh;
+			cursor: pointer;
+			position: relative;
+
+			@media (min-width: 928px) {
+				.Home__gridOver, .Home__gridTitle {
+					display: none;
+				}
+			}
+
+			&:hover {
+
+				.Home__gridOver, .Home__gridTitle {
+					display: block;
+				}
+			}
+		}
+
+		&Image {
+			width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+		}
+
+		&Over {
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: block;
+	    background-color: $color-grey08;
+	    opacity: 0.3;
+		}
+
+		&Title {
+	    position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			z-index: 1000;
+			font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+			color: $color-white;
+			font-size: 16px;
+			padding: 20px;
+			background-color: $color-grey08;
+		}
+
+		margin-bottom: 500px;
+	}
+
 	&__section {
 		width: 80%;
 		margin: 0 auto;
@@ -188,12 +258,12 @@ body, html {
 	&__card {
 		background-color: #FFFFFF;
 		width: 200px;
-    	padding: 20px;
-    	margin: 0 auto;
-	    position: absolute;
-	    bottom: -50px;
-	    left: 0;
-	    right: 0;
+  	padding: 20px;
+  	margin: 0 auto;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
 
 		&Title {
 			font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
@@ -226,15 +296,15 @@ body, html {
 
 .ArtPage {
 	width: 80%;
-    margin: 20px auto;
+  margin: 20px auto;
 
-    &__title {
-		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
-		font-size: 24px;
-		text-align: center;
-		display: block;
-		color: $color-white;    	
-    }
+  &__title {
+	font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+	font-size: 24px;
+	text-align: center;
+	display: block;
+	color: $color-white;    	
+  }
 
 	&__grid {
 		display: grid;
