@@ -64,6 +64,20 @@ body, html {
   right: 0;
   bottom: 0; }
 
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes translateIn {
+  from {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%); }
+  to {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%); } }
 .Header {
   width: auto;
   height: 100%;
@@ -83,22 +97,26 @@ body, html {
     background-size: cover; }
   .Header__content {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -80%);
+    animation: translateIn 1s;
+    width: 100%; }
   .Header__title {
     font-family: Better-Yesterday, Arial-bold, arial, sans-serif;
     font-size: 5em;
     margin: 0 0 20px;
     text-align: center;
     font-weight: 100;
-    color: #fff; }
+    color: #fff;
+    animation: fadein 2s; }
   .Header__subtitle {
     font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
     font-size: 15px;
     text-align: center;
     display: block;
-    color: #fff; }
+    color: #fff;
+    animation: fadein 2s; }
   .Header__nav {
     font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
     font-size: 30px;
@@ -115,27 +133,33 @@ body, html {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #000000;
+  background-color: #2d0e0b;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 35px; }
   .Nav__item {
     padding: 8px 8px 8px 32px;
     display: block;
-    transition: 0.3s; }
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 5px; }
     .Nav__item a {
       font-family: Caviar-Dreams-bold, Arial-bold, arial, sans-serif;
       color: #fff;
       font-size: 25px; }
     .Nav__item:hover {
-      background-color: #282828; }
+      background-color: #540707; }
   .Nav__close {
     color: #fff;
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 0;
     font-size: 35px;
-    margin-left: 50px; }
+    margin-left: 50px;
+    width: 40px;
+    text-align: center; }
+    .Nav__close:hover {
+      background-color: #540707; }
 
 .Home__link {
   width: 100%;
@@ -147,40 +171,48 @@ body, html {
 .Home__section {
   width: 80%;
   margin: 0 auto;
-  color: #FFFFFF;
+  color: #fff;
   font-size: 12px;
   position: relative; }
   @media (min-width: 928px) {
-    .Home__section .backgroundHover, .Home__section .Home__button {
-      display: none; } }
-  .Home__section:hover .backgroundHover, .Home__section:hover .Home__button {
-    display: block; }
+    .Home__section .backgroundHover {
+      opacity: 0; } }
+  .Home__section:hover .Home__title {
+    display: block;
+    transform: translate(0); }
+  .Home__section:hover .backgroundHover {
+    opacity: 0.3; }
   .Home__section--image {
     width: 100%;
     height: 70vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden; }
     .Home__section--image01 {
       background-image: url("../images/home_01.jpg"); }
     .Home__section--image02 {
       background-image: url("../images/home_02.jpg"); }
-.Home__button {
+.Home__title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 60px;
+  padding: 20px;
+  right: 0;
+  bottom: 0;
   display: block;
   z-index: 1000;
   font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
-  color: #fff;
-  font-size: 16px;
-  padding: 20px;
-  background-color: #282828; }
+  color: #fff; }
+  @media (min-width: 928px) {
+    .Home__title {
+      transform: translate(100%);
+      transition: 0.3s ease-in; } }
 
 .ArtPage {
   width: 80%;
+  min-height: 80vh;
   margin: 20px auto; }
   .ArtPage__title {
     font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
@@ -200,6 +232,10 @@ body, html {
         grid-template-rows: repeat(3, 1fr); } }
   .ArtPage__image {
     width: 100%; }
+  .ArtPage__paragraph {
+    font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+    padding: 50px 0;
+    color: #fff; }
 
 .Footer {
   height: 50vh;
