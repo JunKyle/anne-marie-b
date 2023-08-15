@@ -17,12 +17,6 @@
 			"name": "drawings-03",
 			"alternative": "description du dessin",
 			"link": "./assets/images/drawings/003.jpg"
-		},
-		{
-			"id": 3,
-			"name": "drawings-04",
-			"alternative": "description du dessin",
-			"link": "./assets/images/drawings/004.jpg"
 		}
 	]
 }

@@ -81,6 +81,24 @@ body, html {
 		transform: translate(-50%, -80%);	 }
 }
 
+.paragraph {
+	font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+	color: $color-white;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 0;
+
+	&--small {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+.link {
+	color: $color-white;
+	text-decoration: underline;	
+}
+
 .Header {
 	width: auto;
 	height: 100%;
@@ -198,9 +216,31 @@ body, html {
 		display: block;
 	}
 
-	&__paragraph {	
-		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+	&__paragraph {
+		display: flex;
+		flex-direction: column-reverse;
+    align-items: center;
 		padding: 50px 0;
+
+		@media (min-width: 928px) {
+			flex-direction: row;
+		}
+	}
+
+	&__image {
+		margin-top: 32px;
+
+		@media (min-width: 928px) {
+			margin-right: 32px;
+			margin-top: 0;
+		}
+	}
+
+	&__separator {
+		display: block;
+		width: 50%;
+		border-top: 1px $color-white solid;
+		margin: 0 auto;
 	}
 
 	&__section {
@@ -268,7 +308,6 @@ body, html {
 
 .ArtPage {
 	width: 80%;
-	min-height: 80vh;
   margin: 20px auto;
 
   &__title {
@@ -282,13 +321,11 @@ body, html {
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: repeat(1, 1fr);
 		grid-column-gap: 15px;
 		grid-row-gap: 15px;
 
 		@media (min-width: 928px) {
 			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(3, 1fr);
 		}
 	}
 
@@ -296,7 +333,34 @@ body, html {
 		width: 100%;;
 	}
 
-	&__paragraph {	
+	&__paragraph {
+		padding: 50px 0;
+	}
+}
+
+.SingleArt {
+	width: 80%;
+  margin: 20px auto;
+	
+	&__title {
+		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+		font-size: 24px;
+		text-align: center;
+		display: block;
+		color: $color-white;
+	}
+
+	&__carousel {
+		height: 80vh;
+	}
+
+	&__image {    
+		height: 100%;
+    margin: 0 auto;
+    display: block;
+	}
+
+	&__description {	
 		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
 		padding: 50px 0;
 		color: $color-white

@@ -78,6 +78,20 @@ body, html {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -80%); } }
+.paragraph {
+  font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0; }
+  .paragraph--small {
+    font-size: 14px;
+    line-height: 18px; }
+
+.link {
+  color: #fff;
+  text-decoration: underline; }
+
 .Header {
   width: auto;
   height: 100%;
@@ -166,8 +180,24 @@ body, html {
   height: 100%;
   display: block; }
 .Home__paragraph {
-  font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
   padding: 50px 0; }
+  @media (min-width: 928px) {
+    .Home__paragraph {
+      flex-direction: row; } }
+.Home__image {
+  margin-top: 32px; }
+  @media (min-width: 928px) {
+    .Home__image {
+      margin-right: 32px;
+      margin-top: 0; } }
+.Home__separator {
+  display: block;
+  width: 50%;
+  border-top: 1px #fff solid;
+  margin: 0 auto; }
 .Home__section {
   width: 80%;
   margin: 0 auto;
@@ -212,7 +242,6 @@ body, html {
 
 .ArtPage {
   width: 80%;
-  min-height: 80vh;
   margin: 20px auto; }
   .ArtPage__title {
     font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
@@ -223,16 +252,32 @@ body, html {
   .ArtPage__grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px; }
     @media (min-width: 928px) {
       .ArtPage__grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr); } }
+        grid-template-columns: repeat(3, 1fr); } }
   .ArtPage__image {
     width: 100%; }
   .ArtPage__paragraph {
+    padding: 50px 0; }
+
+.SingleArt {
+  width: 80%;
+  margin: 20px auto; }
+  .SingleArt__title {
+    font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    color: #fff; }
+  .SingleArt__carousel {
+    height: 80vh; }
+  .SingleArt__image {
+    height: 100%;
+    margin: 0 auto;
+    display: block; }
+  .SingleArt__description {
     font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
     padding: 50px 0;
     color: #fff; }

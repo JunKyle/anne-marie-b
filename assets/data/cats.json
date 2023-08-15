@@ -1,28 +1,10 @@
 {
-	"sculptures": [
+	"cats": [
 		{
 			"id": 0,
-			"name": "sculptures-01",
+			"name": "cats-01",
 			"alternative": "description du dessin",
-			"link": "./assets/images/sculptures/001.jpg"
-		},
-		{
-			"id": 1,
-			"name": "sculptures-02",
-			"alternative": "description du dessin",
-			"link": "./assets/images/sculptures/002.jpg"
-		},
-		{
-			"id": 2,
-			"name": "sculptures-03",
-			"alternative": "description du dessin",
-			"link": "./assets/images/sculptures/003.jpg"
-		},
-		{
-			"id": 3,
-			"name": "sculptures-04",
-			"alternative": "description du dessin",
-			"link": "./assets/images/sculptures/004.jpg"
+			"link": "./assets/images/cats/001.jpg"
 		}
 	]
 }
