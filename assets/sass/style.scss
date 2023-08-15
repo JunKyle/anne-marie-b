@@ -64,23 +64,6 @@ body, html {
 	bottom: 0;	
 }
 
-@keyframes fadein {
-  from { opacity: 0}
-  to   { opacity: 1}
-}
-
-
-@keyframes translateIn {
-  from { 
-		top: 90%;
-		left: 50%;
-		transform: translate(-50%, -90%);	 }
-  to   { 
-		top: 80%;
-		left: 50%;
-		transform: translate(-50%, -80%);	 }
-}
-
 .paragraph {
 	font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
 	color: $color-white;
@@ -97,6 +80,23 @@ body, html {
 .link {
 	color: $color-white;
 	text-decoration: underline;	
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+
+@keyframes translateIn {
+  from { 
+		top: 90%;
+		left: 50%;
+		transform: translate(-50%, -90%);	 }
+  to   { 
+		top: 80%;
+		left: 50%;
+		transform: translate(-50%, -80%);	 }
 }
 
 .Header {
@@ -135,6 +135,11 @@ body, html {
 		&--sculptures {
 			background-image: url("../images/header-sculptures.jpg");
 			background-position-y: -300px;
+		}
+
+		&--contact {
+			background-image: url("../images/header-contact.jpg");
+			background-position-y: -190px;
 		}
 	}
 
@@ -242,7 +247,7 @@ body, html {
 		}
 	}
 
-	&__image {
+	&__avatar {
 		margin-top: 32px;
 
 		@media (min-width: 928px) {
@@ -264,6 +269,7 @@ body, html {
 		color: $color-white;
 		font-size: 12px;
 		position: relative;
+		overflow: hidden;
 
 		@media (min-width: 928px) {
 			.backgroundHover {
@@ -273,13 +279,8 @@ body, html {
 
 		&:hover {
 
-			.Home__title {
-				display: block;
-				transform: translate(0);
-			}
-
 			.backgroundHover {
-				opacity: 0.3;
+				opacity: 0.1;
 			}
 		}
 
@@ -291,14 +292,13 @@ body, html {
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: pointer;
-			overflow: hidden;
 
-			&01 {
-				background-image: url("../images/home_01.jpg");
+			&Drawings {
+				background-image: url("../images/home-drawings.jpg");
 			}
 
-			&02 {
-				background-image: url("../images/home_02.jpg");
+			&Sculptures {
+				background-image: url("../images/home-sculptures.jpg");
 			}
 		}
 	}
@@ -313,11 +313,6 @@ body, html {
 		z-index: 1000;
 		font-family: Caviar-Dreams, Arial-bold, arial, sans-serif;
 		color: $color-white;
-
-		@media (min-width: 928px) {
-			transform: translate(100%);
-    	transition: 0.3s ease-in;
-		}
 	}
 }
 
@@ -349,7 +344,11 @@ body, html {
 	}
 
 	&__paragraph {
-		padding: 50px 0;
+		padding: 50px 10px;
+
+		@media (min-width: 928px) {
+			padding: 50px 32px;
+		}
 	}
 }
 
