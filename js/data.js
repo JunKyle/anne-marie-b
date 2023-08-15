@@ -22,7 +22,7 @@ function getData (slug) {
         let art = data[slug];
         if (art && art.length > 0) {
             for (let i=0; i < art.length; i++) {
-                htmlArt += '<a class="ArtPage__item" href="' + art[i].link +'">';
+                htmlArt += '<a class="ArtPage__item" href="' + art[i].link +'" target="_blank">';
                 htmlArt += '<img class="ArtPage__image" src="' + art[i].image  + '" alt="' + art[i].alternative  + '" title="' + art[i].name  + '"/>';
                 htmlArt += '</a>';
             }

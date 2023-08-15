@@ -7,7 +7,7 @@
 			"image": "./assets/images/sculptures/001.jpg",
 			"title": "Buste de femme",
 			"description": "Taille, matière, sujet",
-			"link": "art.html?slug=sculptures&id=0",
+			"link": "./assets/images/sculptures/001.jpg",
 			"items": [
 				{
 					"id": 0,
@@ -23,7 +23,63 @@
 			"image": "./assets/images/sculptures/002.jpg",
 			"title": "Buste de chat",
 			"description": "Taille, matière, sujet",
-			"link": "art.html?slug=sculptures&id=1"
+			"link": "./assets/images/sculptures/002.jpg"
+		},
+		{
+			"id": 2,
+			"name": "sculptures-03",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/003.jpg",
+			"link": "./assets/images/sculptures/003.jpg"
+		},
+		{
+			"id": 3,
+			"name": "sculptures-04",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/004.jpg",
+			"link": "./assets/images/sculptures/004.jpg"
+		},
+		{
+			"id": 4,
+			"name": "sculptures-05",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/005.jpg",
+			"link": "./assets/images/sculptures/005.jpg"
+		},
+		{
+			"id": 5,
+			"name": "sculptures-06",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/006.jpg",
+			"link": "./assets/images/sculptures/006.jpg"
+		},
+		{
+			"id": 6,
+			"name": "sculptures-07",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/007.jpg",
+			"link": "./assets/images/sculptures/007.jpg"
+		},
+		{
+			"id": 7,
+			"name": "sculptures-08",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/008.jpg",
+			"link": "./assets/images/sculptures/008.jpg"
+		},
+		{
+			"id": 8,
+			"name": "sculptures-09",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/009.jpg",
+			"link": "./assets/images/sculptures/009.jpg"
+		},
+		{
+			"id": 9,
+			"name": "sculptures-10",
+			"alternative": "description du dessin",
+			"image": "./assets/images/sculptures/010.jpg",
+			"link": "./assets/images/sculptures/010.jpg"
 		}
 	]
 }

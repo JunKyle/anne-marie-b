@@ -121,6 +121,21 @@ body, html {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+    background-position-x: 60%;
+
+    @media (min-width: 928px) {			
+    	background-position-x: center;
+		}
+
+		&--drawings {
+			background-image: url("../images/header-drawings.jpg");
+			background-position-y: -300px;
+		}
+
+		&--sculptures {
+			background-image: url("../images/header-sculptures.jpg");
+			background-position-y: -300px;
+		}
 	}
 
 	&__content {
