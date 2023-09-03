@@ -78,6 +78,12 @@ body, html {
   color: #fff;
   text-decoration: underline; }
 
+.separator {
+  display: block;
+  width: 50%;
+  border-top: 1px #fff solid;
+  margin: 0 auto; }
+
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -264,12 +270,24 @@ body, html {
       .ArtPage__grid {
         grid-template-columns: repeat(3, 1fr); } }
   .ArtPage__image {
-    width: 100%; }
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 40px; }
+    @media (min-width: 928px) {
+      .ArtPage__image {
+        margin-top: 20px; } }
   .ArtPage__paragraph {
-    padding: 50px 10px; }
+    padding: 50px 10px;
+    color: #fff; }
     @media (min-width: 928px) {
       .ArtPage__paragraph {
         padding: 50px 32px; } }
+  .ArtPage__item {
+    background-color: #fff;
+    border-bottom: 5px solid #540707;
+    border-left: 5px solid #540707; }
 
 .SingleArt {
   width: 80%;

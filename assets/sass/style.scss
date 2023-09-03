@@ -82,6 +82,13 @@ body, html {
 	text-decoration: underline;	
 }
 
+.separator {
+	display: block;
+	width: 50%;
+	border-top: 1px $color-white solid;
+	margin: 0 auto;
+}
+
 @keyframes fadein {
   from { opacity: 0}
   to   { opacity: 1}
@@ -339,16 +346,34 @@ body, html {
 		}
 	}
 
-	&__image {
-		width: 100%;;
+	&__image {    
+		width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+		@media (min-width: 928px) {
+    	margin-top: 20px;
+		}
 	}
 
 	&__paragraph {
 		padding: 50px 10px;
+		color: $color-white;
 
 		@media (min-width: 928px) {
 			padding: 50px 32px;
 		}
+	}
+
+	&__item {
+		background-color: $color-white;
+		border-bottom: 5px solid $color-red;
+		border-left: 5px solid $color-red;
+
+		//border-bottom: 5px solid #9f4d4d;
+    //border-left: 5px solid #9f4d4d;
 	}
 }
 
